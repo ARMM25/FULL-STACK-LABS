@@ -2,21 +2,26 @@ var express = require('express');
 var app = express();
 
 
-
+//configuring a route to return HTML content when the "/html" route is requested
 app.get('/html', function (req, res){
     res.send('<html><head></head><body><h1>Hello World!</h1></body></html>');
 });
 
-
-app.get('/jason', function(req,res){
-    res.json({firstname: 'john', lastname: 'Smith'}); 
+//returns json content when "/jason" route is requested
+app.get('/json', function(req,res){
+    res.json({firstname: 'John', lastname: 'Smith'}); 
 });
 
+//this one allows a combination of the following: once you implement them in url
+// /torontoraptorsteam
+// /torontomarliesteam
+// /torontoabcteam
+// /torontoteam
 app.get('/toronto(raptors|marlies|abc)?team', function(req,res){
-    req.send('<html><head></head><body><h1>Go Toronto!</h1></body></html>');
+    res.send('<html><head></head><body><h1>Go Toronto!</h1></body></html>');
 });
 
-app.listen(3000, ()=>{
+app.listen(3000, function(){
     console.log("Example of listening port 3000");
 });
 

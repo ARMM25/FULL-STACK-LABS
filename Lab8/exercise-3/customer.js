@@ -1,6 +1,6 @@
 var Customer = /** @class */ (function () {
     function Customer(firstName, lastName) {
-        this.firstName = firstName;
+        this.firstName = firstName; 
         this.lastName = lastName;
     }
     Customer.prototype.greeter = function () {
@@ -8,5 +8,6 @@ var Customer = /** @class */ (function () {
     };
     return Customer;
 }());
-var customer = new Customer("John", "Smith");
-customer.greeter();
+var customer = new Customer("John", "Smith"); 
+customer.greeter(); 
+

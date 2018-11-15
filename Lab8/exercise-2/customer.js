@@ -6,7 +6,8 @@ var Customer = /** @class */ (function () {
     };
     return Customer;
 }());
+
 var customer = new Customer();
 customer.firstName = "John";
 customer.lastName = "Smith";
-customer.greeter();
+customer.greeter(); 
