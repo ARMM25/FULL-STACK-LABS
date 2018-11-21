@@ -5,11 +5,15 @@ import {FormsModule} from '@angular/forms';
 //import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeoresComponent } from './heores/heores.component';
+import { RemoveSpacesPipe } from './remove-spaces.pipe';
+import { DirectivePipe } from './directive.pipe';
 
 @NgModule({
   declarations: [
     //AppComponent,
-    HeoresComponent
+    HeoresComponent,
+    RemoveSpacesPipe,
+    DirectivePipe
   ],
   imports: [
     BrowserModule,
